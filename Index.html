@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cauculadora</title>
+    <script>
+
+        var n1 = 0;
+        var n2 = 0;
+        var operador = false
+
+
+
+        function calculadora(param) {
+            if (document.getElementById("resultado").innerHTML == 0) {
+                document.getElementById("resultado").innerHTML = param;
+            }
+            else {
+                document.getElementById("resultado").innerHTML += param;
+            }
+
+        }
+
+
+
+        function soma() {
+
+            operador = "+";
+            n1 = document.getElementById("resultado").innerHTML;
+            document.getElementById("resultado").innerHTML = 0;
+        }
+
+        function mult() {
+
+            operador = "x";
+            n1 = document.getElementById("resultado").innerHTML;
+            document.getElementById("resultado").innerHTML = 0;
+        }
+
+        function divisao() {
+
+            operador = "/";
+            n1 = document.getElementById("resultado").innerHTML;
+            document.getElementById("resultado").innerHTML = 0;
+        }
+
+        function sub() {
+
+            operador = "-";
+            n1 = document.getElementById("resultado").innerHTML;
+            document.getElementById("resultado").innerHTML = 0;
+        }
+
+
+
+        function resultar() {
+
+            n2 = document.getElementById("resultado").innerHTML;
+            if (operador == "+" ) document.getElementById("resultado").innerHTML = Number(n1) + Number(n2);
+
+            n2 = document.getElementById("resultado").innerHTML;
+            if (operador == "x" ) document.getElementById("resultado").innerHTML = Number(n1) * Number(n2);
+
+            n2 = document.getElementById("resultado").innerHTML;
+            if (operador == "/" ) document.getElementById("resultado").innerHTML = Number(n1) / Number(n2);
+
+            n2 = document.getElementById("resultado").innerHTML;
+            if (operador == "-" ) document.getElementById("resultado").innerHTML = Number(n1) - Number(n2);
+
+
+        }
+
+
+
+    </script>
+    <style>
+
+        button {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            
+            color: gray;
+
+        }
+
+    </style>
+</head>
+
+<body>
+ <style>
+    body{
+    background-color: gray;
+    
+
+
+    }
+    #borda{
+ border: solid, black, 1px;
+width: 40%;
+    }
+ </style>
+
+<center>
+    
+    <p id="resultado">0</p>
+    
+    
+        <button onclick="location.reload()">C</button>
+        <button onclick="divisao()">/</button>
+        <button onclick="mult()" >x</button>
+        <button onclick="resultar()">=</button>
+    </div>
+    <div>
+        <button onclick="calculadora(7)">7</button>
+        <button onclick="calculadora(8)">8</button>
+        <button onclick="calculadora(9)">9</button>
+        <button onclick="sub()">-</button>
+    </div>
+    <div>
+        <button onclick="calculadora(4)">4</button>
+        <button onclick="calculadora(5)">5</button>
+        <button onclick="calculadora(6)">6</button>
+        <button onclick="soma()">+</button>
+    </div>
+    <div>
+        <button onclick="calculadora(1)">1</button>
+        <button onclick="calculadora(2)">2</button>
+        <button onclick="calculadora(3)">3</button>
+        <button onclick="calculadora(0)">0</button>
+   
+
+</center>
+
+
+
+</body>
+
+</html>
